@@ -1,26 +1,40 @@
 {
-    "10": {
-        "inputs": {
-            "model_url": "",
-            "path": ""
-        },
-        "class_type": "LoadModelFromCivitAI",
-        "_meta": {
-            "title": "[FS]⚡Load Model from CivitAI"
-        }
-    },
     "11": {
         "inputs": {
             "model_type": "lora",
             "model_name": [
-                "10",
+                "14",
                 0
             ],
-            "path_in_volume": ""
+            "path_in_volume": "/loras",
+            "huggingface_url": [
+                "13",
+                0
+            ]
         },
         "class_type": "SaveModelToFlowscaleVolume",
         "_meta": {
             "title": "[FS]⚡Save Model to Flowscale Volume"
+        }
+    },
+    "13": {
+        "inputs": {
+            "default_value": "https://huggingface.co/danbrown/loras/resolve/main/add_detail.safetensors",
+            "label": "CivitAI URL"
+        },
+        "class_type": "FSLoadText",
+        "_meta": {
+            "title": "[FS]⚡Load Text (Input)"
+        }
+    },
+    "14": {
+        "inputs": {
+            "default_value": "add_detail.safetensors\n\n",
+            "label": "Model Name"
+        },
+        "class_type": "FSLoadText",
+        "_meta": {
+            "title": "[FS]⚡Load Text (Input)"
         }
     }
 }
