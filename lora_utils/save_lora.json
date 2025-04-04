@@ -1,55 +1,20 @@
 {
-    "last_node_id": 11,
-    "last_link_id": 10,
+    "last_node_id": 14,
+    "last_link_id": 14,
     "nodes": [
-        {
-            "id": 10,
-            "type": "LoadModelFromCivitAI",
-            "pos": [
-                7.608243465423584,
-                286.390380859375
-            ],
-            "size": [
-                352.79998779296875,
-                82
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "filepath",
-                    "type": "STRING",
-                    "links": [
-                        10
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "FlowScale-AI/flowscale-nodes",
-                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
-                "Node name for S&R": "LoadModelFromCivitAI"
-            },
-            "widgets_values": [
-                "",
-                ""
-            ]
-        },
         {
             "id": 11,
             "type": "SaveModelToFlowscaleVolume",
             "pos": [
-                546.532958984375,
-                300.8503112792969
+                599.4251098632812,
+                134.7345733642578
             ],
             "size": [
                 441,
                 178
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [
                 {
@@ -58,7 +23,7 @@
                     "widget": {
                         "name": "model_name"
                     },
-                    "link": 10
+                    "link": 13
                 },
                 {
                     "name": "huggingface_url",
@@ -67,7 +32,7 @@
                     "widget": {
                         "name": "huggingface_url"
                     },
-                    "link": null
+                    "link": 14
                 },
                 {
                     "name": "s3_url",
@@ -103,20 +68,98 @@
             "widgets_values": [
                 "lora",
                 "",
-                "",
+                "/loras",
                 "",
                 "",
                 ""
+            ]
+        },
+        {
+            "id": 13,
+            "type": "FSLoadText",
+            "pos": [
+                -50.99919509887695,
+                348.0426330566406
+            ],
+            "size": [
+                400,
+                200
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        14
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
+                "Node name for S&R": "FSLoadText"
+            },
+            "widgets_values": [
+                "https://huggingface.co/danbrown/loras/resolve/main/add_detail.safetensors",
+                "CivitAI URL"
+            ]
+        },
+        {
+            "id": 14,
+            "type": "FSLoadText",
+            "pos": [
+                -22.073646545410156,
+                83.5798110961914
+            ],
+            "size": [
+                400,
+                200
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
+                "Node name for S&R": "FSLoadText"
+            },
+            "widgets_values": [
+                "add_detail.safetensors\n\n",
+                "Model Name"
             ]
         }
     ],
     "links": [
         [
-            10,
-            10,
+            13,
+            14,
             0,
             11,
             0,
+            "STRING"
+        ],
+        [
+            14,
+            13,
+            0,
+            11,
+            1,
             "STRING"
         ]
     ],
@@ -126,8 +169,8 @@
         "ds": {
             "scale": 1.2100000000000002,
             "offset": {
-                "0": 99.759521484375,
-                "1": -80.27406311035156
+                "0": 116.2884521484375,
+                "1": 26.337507247924805
             }
         }
     },
