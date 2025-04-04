@@ -1,0 +1,26 @@
+{
+    "10": {
+        "inputs": {
+            "model_url": "",
+            "path": ""
+        },
+        "class_type": "LoadModelFromCivitAI",
+        "_meta": {
+            "title": "[FS]⚡Load Model from CivitAI"
+        }
+    },
+    "11": {
+        "inputs": {
+            "model_type": "lora",
+            "model_name": [
+                "10",
+                0
+            ],
+            "path_in_volume": ""
+        },
+        "class_type": "SaveModelToFlowscaleVolume",
+        "_meta": {
+            "title": "[FS]⚡Save Model to Flowscale Volume"
+        }
+    }
+}
