@@ -1,0 +1,135 @@
+{
+    "last_node_id": 11,
+    "last_link_id": 10,
+    "nodes": [
+        {
+            "id": 10,
+            "type": "LoadModelFromCivitAI",
+            "pos": [
+                7.608243465423584,
+                286.390380859375
+            ],
+            "size": [
+                352.79998779296875,
+                82
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "filepath",
+                    "type": "STRING",
+                    "links": [
+                        10
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
+                "Node name for S&R": "LoadModelFromCivitAI"
+            },
+            "widgets_values": [
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 11,
+            "type": "SaveModelToFlowscaleVolume",
+            "pos": [
+                546.532958984375,
+                300.8503112792969
+            ],
+            "size": [
+                441,
+                178
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model_name",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "model_name"
+                    },
+                    "link": 10
+                },
+                {
+                    "name": "huggingface_url",
+                    "type": "STRING",
+                    "shape": 7,
+                    "widget": {
+                        "name": "huggingface_url"
+                    },
+                    "link": null
+                },
+                {
+                    "name": "s3_url",
+                    "type": "STRING",
+                    "shape": 7,
+                    "widget": {
+                        "name": "s3_url"
+                    },
+                    "link": null
+                },
+                {
+                    "name": "civitai_url",
+                    "type": "STRING",
+                    "shape": 7,
+                    "widget": {
+                        "name": "civitai_url"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "download_url",
+                    "type": "STRING",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
+                "Node name for S&R": "SaveModelToFlowscaleVolume"
+            },
+            "widgets_values": [
+                "lora",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    ],
+    "links": [
+        [
+            10,
+            10,
+            0,
+            11,
+            0,
+            "STRING"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 1.2100000000000002,
+            "offset": {
+                "0": 99.759521484375,
+                "1": -80.27406311035156
+            }
+        }
+    },
+    "version": 0.4
+}
