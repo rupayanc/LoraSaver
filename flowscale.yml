@@ -7,7 +7,7 @@ workflows:
   - id: l9f5c747eqe
     name: save_lora_api.json
     file: lora_utils/save_lora_api.json
-    version: 1
+    version: 2
     description: ''
     inputs:
       - path: 13.inputs.default_value
@@ -24,6 +24,13 @@ workflows:
         demo_type: text
         category: input
         randomize: false
+      - path: 16.inputs.default_value
+        label: Model Name
+        parameter_name: default_value_91846
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
     outputs: []
     skip_preprocess: true
     advancedConfig: false
@@ -31,4 +38,4 @@ normal_workflows:
   - id: 5ziln8ezgt3
     name: save_lora.json
     file: lora_utils/save_lora.json
-    version: 1
+    version: 2
