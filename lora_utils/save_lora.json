@@ -1,120 +1,13 @@
 {
-    "last_node_id": 14,
-    "last_link_id": 14,
+    "last_node_id": 16,
+    "last_link_id": 18,
     "nodes": [
-        {
-            "id": 11,
-            "type": "SaveModelToFlowscaleVolume",
-            "pos": [
-                599.4251098632812,
-                134.7345733642578
-            ],
-            "size": [
-                441,
-                178
-            ],
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "model_name",
-                    "type": "STRING",
-                    "widget": {
-                        "name": "model_name"
-                    },
-                    "link": 13
-                },
-                {
-                    "name": "huggingface_url",
-                    "type": "STRING",
-                    "shape": 7,
-                    "widget": {
-                        "name": "huggingface_url"
-                    },
-                    "link": 14
-                },
-                {
-                    "name": "s3_url",
-                    "type": "STRING",
-                    "shape": 7,
-                    "widget": {
-                        "name": "s3_url"
-                    },
-                    "link": null
-                },
-                {
-                    "name": "civitai_url",
-                    "type": "STRING",
-                    "shape": 7,
-                    "widget": {
-                        "name": "civitai_url"
-                    },
-                    "link": null
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "download_url",
-                    "type": "STRING",
-                    "links": null
-                }
-            ],
-            "properties": {
-                "aux_id": "FlowScale-AI/flowscale-nodes",
-                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
-                "Node name for S&R": "SaveModelToFlowscaleVolume"
-            },
-            "widgets_values": [
-                "lora",
-                "",
-                "/loras",
-                "",
-                "",
-                ""
-            ]
-        },
         {
             "id": 13,
             "type": "FSLoadText",
             "pos": [
-                -50.99919509887695,
-                348.0426330566406
-            ],
-            "size": [
-                400,
-                200
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "text",
-                    "type": "STRING",
-                    "links": [
-                        14
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "FlowScale-AI/flowscale-nodes",
-                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
-                "Node name for S&R": "FSLoadText"
-            },
-            "widgets_values": [
-                "https://huggingface.co/danbrown/loras/resolve/main/add_detail.safetensors",
-                "CivitAI URL"
-            ]
-        },
-        {
-            "id": 14,
-            "type": "FSLoadText",
-            "pos": [
-                -22.073646545410156,
-                83.5798110961914
+                -54.30498123168945,
+                130.68724060058594
             ],
             "size": [
                 400,
@@ -129,7 +22,7 @@
                     "name": "text",
                     "type": "STRING",
                     "links": [
-                        13
+                        15
                     ],
                     "slot_index": 0
                 }
@@ -140,25 +33,148 @@
                 "Node name for S&R": "FSLoadText"
             },
             "widgets_values": [
-                "add_detail.safetensors\n\n",
+                "https://huggingface.co/danbrown/loras/resolve/main/ghibli_scenery.safetensors?download=true",
+                "CivitAI URL"
+            ]
+        },
+        {
+            "id": 14,
+            "type": "FSLoadText",
+            "pos": [
+                -41.90834045410156,
+                399.2818603515625
+            ],
+            "size": [
+                354.5454406738281,
+                125.61983489990234
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        18
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
+                "Node name for S&R": "FSLoadText"
+            },
+            "widgets_values": [
+                "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\n",
+                "Model Name"
+            ]
+        },
+        {
+            "id": 15,
+            "type": "SaveModelToFlowscaleVolume",
+            "pos": [
+                516.7697143554688,
+                173.6624298095703
+            ],
+            "size": [
+                441,
+                178
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "download_url",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "download_url"
+                    },
+                    "link": 15
+                },
+                {
+                    "name": "api_key",
+                    "type": "STRING",
+                    "shape": 7,
+                    "widget": {
+                        "name": "api_key"
+                    },
+                    "link": 18
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "download_url",
+                    "type": "STRING",
+                    "links": null,
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "c93d5fe43409aa7da1878609022a289f3cff3fdb",
+                "Node name for S&R": "SaveModelToFlowscaleVolume"
+            },
+            "widgets_values": [
+                "lora",
+                "/loras",
+                "",
+                "civitai",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 16,
+            "type": "FSLoadText",
+            "pos": [
+                -49.34632873535156,
+                587.7123413085938
+            ],
+            "size": [
+                354.5454406738281,
+                125.61983489990234
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
+                "Node name for S&R": "FSLoadText"
+            },
+            "widgets_values": [
+                "2dbeadcb2f3b114fa16409cdcbec7dc3",
                 "Model Name"
             ]
         }
     ],
     "links": [
         [
+            15,
             13,
-            14,
             0,
-            11,
+            15,
             0,
             "STRING"
         ],
         [
+            18,
             14,
-            13,
             0,
-            11,
+            15,
             1,
             "STRING"
         ]
@@ -168,10 +184,10 @@
     "extra": {
         "ds": {
             "scale": 1.2100000000000002,
-            "offset": {
-                "0": 116.2884521484375,
-                "1": 26.337507247924805
-            }
+            "offset": [
+                198.93308024761112,
+                -14.158360520670215
+            ]
         }
     },
     "version": 0.4
