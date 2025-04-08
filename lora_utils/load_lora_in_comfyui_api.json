@@ -1,26 +1,37 @@
 {
-    "12": {
-        "inputs": {
-            "model_url": "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
-            "path": "/loras/my_lora.safetensors"
-        },
-        "class_type": "LoadModelFromCivitAI",
-        "_meta": {
-            "title": "[FS]⚡Load Model from CivitAI"
-        }
-    },
     "13": {
         "inputs": {
             "filename_prefix": "FlowScale",
             "label": "Output Text",
             "text": [
-                "12",
+                "14",
                 0
             ]
         },
         "class_type": "FSSaveText",
         "_meta": {
             "title": "[FS]⚡Save Text (Output)"
+        }
+    },
+    "14": {
+        "inputs": {
+            "model_url": "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
+            "path": "loras"
+        },
+        "class_type": "LoadModelFromURL",
+        "_meta": {
+            "title": "[FS]⚡Load Model from URL"
+        }
+    },
+    "15": {
+        "inputs": {
+            "lora_name": "2d_sprite.safetensors",
+            "strength_model": 1,
+            "strength_clip": 1
+        },
+        "class_type": "LoraLoader",
+        "_meta": {
+            "title": "Load LoRA"
         }
     }
 }
