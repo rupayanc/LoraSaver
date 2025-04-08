@@ -35,7 +35,7 @@
                 "Node name for S&R": "FSLoadText"
             },
             "widgets_values": [
-                "https://huggingface.co/danbrown/loras/resolve/main/2d_sprite.safetensors",
+                "https://replicate.delivery/xezq/47WNLpNK1zoJGZinDVVzZn0h7xsPZesGgZd47kzMWTra3RGKA/trained_model.tar",
                 "Model URL"
             ]
         },
@@ -71,7 +71,7 @@
             },
             "widgets_values": [
                 "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
-                "WebhookURL"
+                "Webhook URL"
             ]
         },
         {
@@ -192,10 +192,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.9090909090909101,
+            "scale": 0.7513148009015786,
             "offset": [
-                116.23165468467538,
-                -52.4007035097201
+                194.75391998437487,
+                228.54264673789575
             ]
         }
     },
