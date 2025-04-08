@@ -1,8 +1,8 @@
 {
     "id": "7a799b61-0230-4ee9-8e6a-0934fac5a0b3",
     "revision": 0,
-    "last_node_id": 17,
-    "last_link_id": 15,
+    "last_node_id": 18,
+    "last_link_id": 16,
     "nodes": [
         {
             "id": 13,
@@ -33,7 +33,7 @@
             },
             "widgets_values": [
                 "FlowScale",
-                "Output Text"
+                "Filepath"
             ]
         },
         {
@@ -117,7 +117,9 @@
                 {
                     "name": "STRING",
                     "type": "STRING",
-                    "links": null
+                    "links": [
+                        16
+                    ]
                 }
             ],
             "properties": {
@@ -171,6 +173,38 @@
                 "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
                 "Webhook URL"
             ]
+        },
+        {
+            "id": 18,
+            "type": "FSSaveText",
+            "pos": [
+                1116.913330078125,
+                422.9801330566406
+            ],
+            "size": [
+                315,
+                82
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "link": 16
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "d22c9620cb244eaa04df05c983ea0c3bb5fcef66",
+                "Node name for S&R": "FSSaveText"
+            },
+            "widgets_values": [
+                "FlowScale",
+                "Webhook Status"
+            ]
         }
     ],
     "links": [
@@ -205,16 +239,24 @@
             16,
             0,
             "STRING"
+        ],
+        [
+            16,
+            16,
+            0,
+            18,
+            0,
+            "STRING"
         ]
     ],
     "groups": [],
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.7513148009015778,
+            "scale": 0.6209213230591552,
             "offset": [
-                74.02909173139858,
-                -151.9929410182951
+                151.98574385908418,
+                -111.0947587756155
             ]
         }
     },
