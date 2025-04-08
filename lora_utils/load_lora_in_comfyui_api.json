@@ -2,7 +2,7 @@
     "13": {
         "inputs": {
             "filename_prefix": "FlowScale",
-            "label": "Output Text",
+            "label": "Filepath",
             "text": [
                 "14",
                 0
@@ -58,6 +58,20 @@
         "class_type": "FSLoadText",
         "_meta": {
             "title": "[FS]⚡Load Text (Input)"
+        }
+    },
+    "18": {
+        "inputs": {
+            "filename_prefix": "FlowScale",
+            "label": "Webhook Status",
+            "text": [
+                "16",
+                0
+            ]
+        },
+        "class_type": "FSSaveText",
+        "_meta": {
+            "title": "[FS]⚡Save Text (Output)"
         }
     }
 }
