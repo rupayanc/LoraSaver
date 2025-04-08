@@ -2,7 +2,7 @@
     "12": {
         "inputs": {
             "model_url": "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
-            "path": "/loras"
+            "path": "/loras/my_lora.safetensors"
         },
         "class_type": "LoadModelFromCivitAI",
         "_meta": {
