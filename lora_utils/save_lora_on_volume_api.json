@@ -1,7 +1,7 @@
 {
     "13": {
         "inputs": {
-            "default_value": "https://huggingface.co/danbrown/loras/resolve/main/2d_sprite.safetensors",
+            "default_value": "https://replicate.delivery/xezq/47WNLpNK1zoJGZinDVVzZn0h7xsPZesGgZd47kzMWTra3RGKA/trained_model.tar",
             "label": "Model URL"
         },
         "class_type": "FSLoadText",
@@ -12,7 +12,7 @@
     "16": {
         "inputs": {
             "default_value": "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
-            "label": "WebhookURL"
+            "label": "Webhook URL"
         },
         "class_type": "FSLoadText",
         "_meta": {
