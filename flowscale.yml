@@ -41,8 +41,30 @@ workflows:
     description: ''
     file: lora_utils/save_lora_on_volume.json
     version: .nan
+  - id: 5zj4i58swwe
+    name: load_lora_in_comfyui_api.json
+    file: lora_utils/load_lora_in_comfyui_api.json
+    version: 0
+    description: ''
+    inputs:
+      - path: 13.inputs.filename_prefix
+        label: filename_prefix
+        parameter_name: filename_prefix_44929
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+    outputs:
+      - label: Output Text
+        demo_type: text
+    skip_preprocess: true
+    advancedConfig: false
 normal_workflows:
   - id: 5ziln8ezgt3
     name: save_lora_on_volume.json
     file: lora_utils/save_lora_on_volume.json
     version: 6
+  - id: 20779wjisgz
+    name: load_lora_in_comfyui.json
+    file: lora_utils/load_lora_in_comfyui.json
+    version: 0
