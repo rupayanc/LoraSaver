@@ -1,14 +1,1 @@
-[
-  {
-    "url": "https://github.com/FlowScale-AI/flowscale-nodes",
-    "name": "flowscale-nodes",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone",
-    "details": {},
-    "nodes": [],
-    "pip": [],
-    "apt": [],
-    "sha": "4d255aad1777ed8eab65be74b7db45031cedf5ac",
-    "cached": "False"
-  }
-]
+[]
