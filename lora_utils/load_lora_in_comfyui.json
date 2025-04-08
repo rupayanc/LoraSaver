@@ -1,43 +1,9 @@
 {
     "id": "7a799b61-0230-4ee9-8e6a-0934fac5a0b3",
     "revision": 0,
-    "last_node_id": 13,
-    "last_link_id": 10,
+    "last_node_id": 15,
+    "last_link_id": 12,
     "nodes": [
-        {
-            "id": 12,
-            "type": "LoadModelFromCivitAI",
-            "pos": [
-                217.03262329101562,
-                226.62818908691406
-            ],
-            "size": [
-                352.79998779296875,
-                82
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "filepath",
-                    "type": "STRING",
-                    "links": [
-                        10
-                    ]
-                }
-            ],
-            "properties": {
-                "aux_id": "FlowScale-AI/flowscale-nodes",
-                "ver": "974ad17165b8b460905943814f2e692cd4618d8f",
-                "Node name for S&R": "LoadModelFromCivitAI"
-            },
-            "widgets_values": [
-                "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
-                "/loras/my_lora.safetensors"
-            ]
-        },
         {
             "id": 13,
             "type": "FSSaveText",
@@ -50,13 +16,13 @@
                 82
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [
                 {
                     "name": "text",
                     "type": "STRING",
-                    "link": 10
+                    "link": 12
                 }
             ],
             "outputs": [],
@@ -69,12 +35,95 @@
                 "FlowScale",
                 "Output Text"
             ]
+        },
+        {
+            "id": 14,
+            "type": "LoadModelFromURL",
+            "pos": [
+                272.8184814453125,
+                192.0965576171875
+            ],
+            "size": [
+                315,
+                82
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "filepath",
+                    "type": "STRING",
+                    "links": [
+                        12
+                    ]
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "d22c9620cb244eaa04df05c983ea0c3bb5fcef66",
+                "Node name for S&R": "LoadModelFromURL"
+            },
+            "widgets_values": [
+                "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
+                "loras"
+            ]
+        },
+        {
+            "id": 15,
+            "type": "LoraLoader",
+            "pos": [
+                258.81878662109375,
+                6.721557140350342
+            ],
+            "size": [
+                315,
+                126
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": null
+                },
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": null
+                },
+                {
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.27",
+                "Node name for S&R": "LoraLoader"
+            },
+            "widgets_values": [
+                "2d_sprite.safetensors",
+                1,
+                1
+            ]
         }
     ],
     "links": [
         [
-            10,
             12,
+            14,
             0,
             13,
             0,
@@ -85,10 +134,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.9090909090909091,
+            "scale": 0.8264462809917354,
             "offset": [
-                -120.81880679856988,
-                -22.877823770141557
+                -37.40881595384323,
+                79.92156269302379
             ]
         }
     },
