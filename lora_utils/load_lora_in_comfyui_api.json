@@ -22,16 +22,5 @@
         "_meta": {
             "title": "[FS]⚡Load Model from URL"
         }
-    },
-    "15": {
-        "inputs": {
-            "lora_name": "2d_sprite.safetensors",
-            "strength_model": 1,
-            "strength_clip": 1
-        },
-        "class_type": "LoraLoader",
-        "_meta": {
-            "title": "Load LoRA"
-        }
     }
 }
