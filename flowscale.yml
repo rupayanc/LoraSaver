@@ -44,7 +44,7 @@ workflows:
   - id: 5zj4i58swwe
     name: load_lora_in_comfyui_api.json
     file: lora_utils/load_lora_in_comfyui_api.json
-    version: 3
+    version: 4
     description: ''
     inputs:
       - path: 13.inputs.filename_prefix
@@ -54,6 +54,13 @@ workflows:
         demo_type: text
         category: output
         randomize: true
+      - path: 17.inputs.default_value
+        label: Webhook URL
+        parameter_name: default_value_94608
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
     outputs:
       - label: Output Text
         demo_type: text
@@ -67,4 +74,4 @@ normal_workflows:
   - id: 20779wjisgz
     name: load_lora_in_comfyui.json
     file: lora_utils/load_lora_in_comfyui.json
-    version: 3
+    version: 4
