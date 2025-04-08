@@ -35,7 +35,7 @@
             },
             "widgets_values": [
                 "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
-                "/loras"
+                "/loras/my_lora.safetensors"
             ]
         },
         {
@@ -85,10 +85,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.7513148009015778,
+            "scale": 0.9090909090909091,
             "offset": [
-                -16.332330000000056,
-                88.5572121585846
+                -120.81880679856988,
+                -22.877823770141557
             ]
         }
     },
