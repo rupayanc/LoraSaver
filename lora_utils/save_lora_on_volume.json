@@ -16,7 +16,7 @@
                 200
             ],
             "flags": {},
-            "order": 2,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -40,41 +40,6 @@
             ]
         },
         {
-            "id": 14,
-            "type": "FSLoadText",
-            "pos": [
-                -41.90834045410156,
-                399.2818603515625
-            ],
-            "size": [
-                354.5454406738281,
-                125.61983489990234
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "text",
-                    "type": "STRING",
-                    "slot_index": 0,
-                    "links": [
-                        19
-                    ]
-                }
-            ],
-            "properties": {
-                "aux_id": "FlowScale-AI/flowscale-nodes",
-                "ver": "ae4978f9f330c1436efba9bf2411dc0ce7c20bd5",
-                "Node name for S&R": "FSLoadText"
-            },
-            "widgets_values": [
-                "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\n",
-                "API Key"
-            ]
-        },
-        {
             "id": 16,
             "type": "FSLoadText",
             "pos": [
@@ -86,7 +51,7 @@
                 125.61983489990234
             ],
             "flags": {},
-            "order": 1,
+            "order": 0,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -113,15 +78,15 @@
             "id": 17,
             "type": "SaveModelToFlowscaleVolume",
             "pos": [
-                472.4718017578125,
-                290.2875671386719
+                457.9518127441406,
+                320.5374755859375
             ],
             "size": [
                 441,
                 150
             ],
             "flags": {},
-            "order": 3,
+            "order": 2,
             "mode": 0,
             "inputs": [
                 {
@@ -134,15 +99,6 @@
                     "shape": 7,
                     "type": "STRING",
                     "link": 22
-                },
-                {
-                    "name": "api_key",
-                    "shape": 7,
-                    "type": "STRING",
-                    "widget": {
-                        "name": "api_key"
-                    },
-                    "link": 19
                 }
             ],
             "outputs": [
@@ -185,7 +141,7 @@
                 82
             ],
             "flags": {},
-            "order": 4,
+            "order": 3,
             "mode": 0,
             "inputs": [
                 {
@@ -207,14 +163,6 @@
         }
     ],
     "links": [
-        [
-            19,
-            14,
-            0,
-            17,
-            4,
-            "STRING"
-        ],
         [
             20,
             13,
