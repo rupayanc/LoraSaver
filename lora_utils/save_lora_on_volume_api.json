@@ -1,7 +1,7 @@
 {
     "13": {
         "inputs": {
-            "default_value": "https://huggingface.co/danbrown/loras/resolve/main/ghibli_scenery.safetensors?download=true",
+            "default_value": "https://huggingface.co/danbrown/loras/resolve/main/2d_sprite.safetensors",
             "label": "Model URL"
         },
         "class_type": "FSLoadText",
@@ -12,7 +12,7 @@
     "14": {
         "inputs": {
             "default_value": "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\n",
-            "label": "Model Name"
+            "label": "API Key"
         },
         "class_type": "FSLoadText",
         "_meta": {
@@ -21,8 +21,8 @@
     },
     "16": {
         "inputs": {
-            "default_value": "2dbeadcb2f3b114fa16409cdcbec7dc3",
-            "label": "Model Name"
+            "default_value": "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
+            "label": "Webhook URL"
         },
         "class_type": "FSLoadText",
         "_meta": {
@@ -41,6 +41,10 @@
             "download_url": [
                 "13",
                 0
+            ],
+            "webhook_url": [
+                "16",
+                0
             ]
         },
         "class_type": "SaveModelToFlowscaleVolume",
@@ -51,10 +55,10 @@
     "18": {
         "inputs": {
             "filename_prefix": "FlowScale",
-            "label": "Output Text",
+            "label": "File ID",
             "text": [
                 "17",
-                0
+                1
             ]
         },
         "class_type": "FSSaveText",
