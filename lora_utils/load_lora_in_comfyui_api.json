@@ -22,5 +22,42 @@
         "_meta": {
             "title": "[FS]⚡Load Model from URL"
         }
+    },
+    "16": {
+        "inputs": {
+            "webhook_url": [
+                "17",
+                0
+            ],
+            "property_name_1": "filepath",
+            "property_value_1": [
+                "14",
+                0
+            ],
+            "context": "",
+            "property_name_2": "status",
+            "property_value_2": [
+                "14",
+                0
+            ],
+            "property_name_3": "",
+            "property_value_3": "",
+            "property_name_4": "",
+            "property_value_4": ""
+        },
+        "class_type": "WebhookSender",
+        "_meta": {
+            "title": "[FS]⚡Send to Webhook"
+        }
+    },
+    "17": {
+        "inputs": {
+            "default_value": "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
+            "label": "Webhook URL"
+        },
+        "class_type": "FSLoadText",
+        "_meta": {
+            "title": "[FS]⚡Load Text (Input)"
+        }
     }
 }
