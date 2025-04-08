@@ -1,0 +1,52 @@
+{
+  "13": {
+    "inputs": {
+      "default_value": "https://huggingface.co/danbrown/loras/resolve/main/ghibli_scenery.safetensors?download=true",
+      "label": "CivitAI URL"
+    },
+    "class_type": "FSLoadText",
+    "_meta": {
+      "title": "[FS]⚡Load Text (Input)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "default_value": "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\n",
+      "label": "Model Name"
+    },
+    "class_type": "FSLoadText",
+    "_meta": {
+      "title": "[FS]⚡Load Text (Input)"
+    }
+  },
+  "15": {
+    "inputs": {
+      "model_type": "lora",
+      "path_in_volume": "/loras",
+      "download_url": [
+        "13",
+        0
+      ],
+      "source": "civitai",
+      "model_name": "",
+      "api_key": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "SaveModelToFlowscaleVolume",
+    "_meta": {
+      "title": "[FS]⚡Save Model to Flowscale Volume"
+    }
+  },
+  "16": {
+    "inputs": {
+      "default_value": "2dbeadcb2f3b114fa16409cdcbec7dc3",
+      "label": "Model Name"
+    },
+    "class_type": "FSLoadText",
+    "_meta": {
+      "title": "[FS]⚡Load Text (Input)"
+    }
+  }
+}
