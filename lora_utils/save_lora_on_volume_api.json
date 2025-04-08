@@ -42,7 +42,7 @@
     "18": {
         "inputs": {
             "filename_prefix": "FlowScale",
-            "label": "File ID",
+            "label": "FileID",
             "text": [
                 "17",
                 1
