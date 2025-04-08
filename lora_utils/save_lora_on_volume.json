@@ -2,7 +2,7 @@
     "id": "c23b6df1-1d3d-4e99-93af-383d84454320",
     "revision": 0,
     "last_node_id": 18,
-    "last_link_id": 21,
+    "last_link_id": 23,
     "nodes": [
         {
             "id": 13,
@@ -35,7 +35,7 @@
                 "Node name for S&R": "FSLoadText"
             },
             "widgets_values": [
-                "https://huggingface.co/danbrown/loras/resolve/main/ghibli_scenery.safetensors?download=true",
+                "https://huggingface.co/danbrown/loras/resolve/main/2d_sprite.safetensors",
                 "Model URL"
             ]
         },
@@ -71,7 +71,7 @@
             },
             "widgets_values": [
                 "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\n",
-                "Model Name"
+                "API Key"
             ]
         },
         {
@@ -94,7 +94,9 @@
                     "name": "text",
                     "type": "STRING",
                     "slot_index": 0,
-                    "links": []
+                    "links": [
+                        22
+                    ]
                 }
             ],
             "properties": {
@@ -103,8 +105,8 @@
                 "Node name for S&R": "FSLoadText"
             },
             "widgets_values": [
-                "2dbeadcb2f3b114fa16409cdcbec7dc3",
-                "Model Name"
+                "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
+                "Webhook URL"
             ]
         },
         {
@@ -131,7 +133,7 @@
                     "name": "webhook_url",
                     "shape": 7,
                     "type": "STRING",
-                    "link": null
+                    "link": 22
                 },
                 {
                     "name": "api_key",
@@ -147,8 +149,13 @@
                 {
                     "name": "download_url",
                     "type": "STRING",
+                    "links": []
+                },
+                {
+                    "name": "file_id",
+                    "type": "STRING",
                     "links": [
-                        21
+                        23
                     ]
                 }
             ],
@@ -162,14 +169,16 @@
                 "/loras",
                 "",
                 ""
-            ]
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
         },
         {
             "id": 18,
             "type": "FSSaveText",
             "pos": [
-                981.6627807617188,
-                286.8482971191406
+                997.3926391601562,
+                279.58819580078125
             ],
             "size": [
                 315,
@@ -182,7 +191,7 @@
                 {
                     "name": "text",
                     "type": "STRING",
-                    "link": 21
+                    "link": 23
                 }
             ],
             "outputs": [],
@@ -193,7 +202,7 @@
             },
             "widgets_values": [
                 "FlowScale",
-                "Output Text"
+                "File ID"
             ]
         }
     ],
@@ -215,9 +224,17 @@
             "STRING"
         ],
         [
-            21,
-            17,
+            22,
+            16,
             0,
+            17,
+            1,
+            "STRING"
+        ],
+        [
+            23,
+            17,
+            1,
             18,
             0,
             "STRING"
@@ -227,10 +244,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.6830134553650705,
+            "scale": 0.7513148009015783,
             "offset": [
-                201.30244206109205,
-                296.59569725989246
+                141.2578017891675,
+                109.76973136752306
             ]
         }
     },
