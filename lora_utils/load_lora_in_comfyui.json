@@ -1,22 +1,22 @@
 {
     "id": "7a799b61-0230-4ee9-8e6a-0934fac5a0b3",
     "revision": 0,
-    "last_node_id": 15,
-    "last_link_id": 12,
+    "last_node_id": 17,
+    "last_link_id": 15,
     "nodes": [
         {
             "id": 13,
             "type": "FSSaveText",
             "pos": [
-                695.9109497070312,
-                279.49896240234375
+                688.3772583007812,
+                247.64569091796875
             ],
             "size": [
                 315,
                 82
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [
                 {
@@ -40,8 +40,8 @@
             "id": 14,
             "type": "LoadModelFromURL",
             "pos": [
-                172.94578552246094,
-                202.06932067871094
+                122.39291381835938,
+                311.7193603515625
             ],
             "size": [
                 315,
@@ -56,7 +56,9 @@
                     "name": "filepath",
                     "type": "STRING",
                     "links": [
-                        12
+                        12,
+                        13,
+                        14
                     ]
                 }
             ],
@@ -69,6 +71,106 @@
                 "https://v3.fal.media/files/elephant/Y5tV8dDTSsgsqrdilumaw_pytorch_lora_weights.safetensors",
                 "loras"
             ]
+        },
+        {
+            "id": 16,
+            "type": "WebhookSender",
+            "pos": [
+                696.220947265625,
+                400.0110778808594
+            ],
+            "size": [
+                315,
+                274
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "webhook_url",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "webhook_url"
+                    },
+                    "link": 15
+                },
+                {
+                    "name": "property_value_1",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "property_value_1"
+                    },
+                    "link": 13
+                },
+                {
+                    "name": "property_value_2",
+                    "shape": 7,
+                    "type": "STRING",
+                    "widget": {
+                        "name": "property_value_2"
+                    },
+                    "link": 14
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "STRING",
+                    "type": "STRING",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "d22c9620cb244eaa04df05c983ea0c3bb5fcef66",
+                "Node name for S&R": "WebhookSender"
+            },
+            "widgets_values": [
+                "\thttps://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
+                "filepath",
+                "",
+                "",
+                "status",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 17,
+            "type": "FSLoadText",
+            "pos": [
+                44.76866149902344,
+                458.16009521484375
+            ],
+            "size": [
+                400,
+                200
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        15
+                    ]
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "d22c9620cb244eaa04df05c983ea0c3bb5fcef66",
+                "Node name for S&R": "FSLoadText"
+            },
+            "widgets_values": [
+                "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
+                "Webhook URL"
+            ]
         }
     ],
     "links": [
@@ -79,16 +181,40 @@
             13,
             0,
             "STRING"
+        ],
+        [
+            13,
+            14,
+            0,
+            16,
+            2,
+            "STRING"
+        ],
+        [
+            14,
+            14,
+            0,
+            16,
+            5,
+            "STRING"
+        ],
+        [
+            15,
+            17,
+            0,
+            16,
+            0,
+            "STRING"
         ]
     ],
     "groups": [],
     "config": {},
     "extra": {
         "ds": {
-            "scale": 1,
+            "scale": 0.7513148009015778,
             "offset": [
-                -96.9770227409526,
-                -69.86985086212147
+                74.02909173139858,
+                -151.9929410182951
             ]
         }
     },
