@@ -12,7 +12,7 @@
     "16": {
         "inputs": {
             "default_value": "https://webhook.site/566996f0-25fd-42e5-a537-441ea8875238",
-            "label": "Webhook URL"
+            "label": "WebhookURL"
         },
         "class_type": "FSLoadText",
         "_meta": {
