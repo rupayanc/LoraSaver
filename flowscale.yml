@@ -7,7 +7,7 @@ workflows:
   - id: l9f5c747eqe
     name: save_lora_on_volume_api.json
     file: lora_utils/save_lora_on_volume_api.json
-    version: 4
+    version: 5
     description: ''
     inputs:
       - path: 13.inputs.default_value
@@ -18,14 +18,14 @@ workflows:
         category: input
         randomize: false
       - path: 14.inputs.default_value
-        label: Model Name
+        label: API Key
         parameter_name: default_value_22416
         type: string
         demo_type: text
         category: input
         randomize: false
       - path: 16.inputs.default_value
-        label: Model Name
+        label: Webhook URL
         parameter_name: default_value_91846
         type: string
         demo_type: text
@@ -39,7 +39,7 @@ workflows:
         category: output
         randomize: true
     outputs:
-      - label: Output Text
+      - label: File ID
         demo_type: text
     skip_preprocess: true
     advancedConfig: false
@@ -52,4 +52,4 @@ normal_workflows:
   - id: 5ziln8ezgt3
     name: save_lora_on_volume.json
     file: lora_utils/save_lora_on_volume.json
-    version: 4
+    version: 5
