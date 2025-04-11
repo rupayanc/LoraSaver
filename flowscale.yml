@@ -1,4 +1,4 @@
-version: 1
+version: 2
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
@@ -80,10 +80,33 @@ workflows:
     file: basicworkflowwithlora/lora_workflow_api.json
     version: 1
     description: ''
-    inputs: []
-    outputs: []
+    inputs:
+      - path: 6.inputs.text
+        label: Prompt
+        parameter_name: text_37062
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+      - path: 10.inputs.lora_name
+        label: LoRA Name
+        parameter_name: lora_name_26181
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+      - path: 9.inputs.filename_prefix
+        label: filename_prefix
+        parameter_name: filename_prefix_39455
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+    outputs:
+      - label: ''
+        demo_type: image
     skip_preprocess: true
-    advancedConfig: false
+    advancedConfig: true
 normal_workflows:
   - id: 5ziln8ezgt3
     name: save_lora_on_volume.json
