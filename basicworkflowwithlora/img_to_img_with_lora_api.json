@@ -40,7 +40,10 @@
     },
     "6": {
         "inputs": {
-            "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+            "text": [
+                "16",
+                0
+            ],
             "clip": [
                 "12",
                 1
@@ -136,6 +139,16 @@
         "class_type": "FSSaveImage",
         "_meta": {
             "title": "[FS]⚡Save Image (Output)"
+        }
+    },
+    "16": {
+        "inputs": {
+            "default_value": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+            "label": "Input Text"
+        },
+        "class_type": "FSLoadText",
+        "_meta": {
+            "title": "[FS]⚡Load Text (Input)"
         }
     }
 }
