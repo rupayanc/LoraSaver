@@ -110,7 +110,7 @@ workflows:
   - id: 65jab0i0fmb
     name: img_to_img_with_lora_api.json
     file: basicworkflowwithlora/img_to_img_with_lora_api.json
-    version: 1
+    version: 2
     description: ''
     inputs:
       - path: 10.inputs.image
@@ -155,4 +155,4 @@ normal_workflows:
   - id: 8vwid38xqsw
     name: img_to_img_with_lora.json
     file: basicworkflowwithlora/img_to_img_with_lora.json
-    version: 1
+    version: 2
