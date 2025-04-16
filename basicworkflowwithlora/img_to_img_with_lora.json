@@ -1,8 +1,8 @@
 {
     "id": "4f13ddb1-20c2-4ea6-a915-af7e357c84bd",
     "revision": 0,
-    "last_node_id": 14,
-    "last_link_id": 17,
+    "last_node_id": 16,
+    "last_link_id": 18,
     "nodes": [
         {
             "id": 3,
@@ -16,7 +16,7 @@
                 262
             ],
             "flags": {},
-            "order": 6,
+            "order": 7,
             "mode": 0,
             "inputs": [
                 {
@@ -69,8 +69,8 @@
             "id": 4,
             "type": "CheckpointLoaderSimple",
             "pos": [
-                -63.64998245239258,
-                357.1999816894531
+                -148.35011291503906,
+                358.4099426269531
             ],
             "size": [
                 315,
@@ -127,13 +127,21 @@
                 164.31304931640625
             ],
             "flags": {},
-            "order": 4,
+            "order": 5,
             "mode": 0,
             "inputs": [
                 {
                     "name": "clip",
                     "type": "CLIP",
                     "link": 13
+                },
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": 18
                 }
             ],
             "outputs": [
@@ -152,7 +160,7 @@
                 "Node name for S&R": "CLIPTextEncode"
             },
             "widgets_values": [
-                "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
+                ""
             ]
         },
         {
@@ -167,7 +175,7 @@
                 180.6060791015625
             ],
             "flags": {},
-            "order": 5,
+            "order": 6,
             "mode": 0,
             "inputs": [
                 {
@@ -207,7 +215,7 @@
                 46
             ],
             "flags": {},
-            "order": 7,
+            "order": 8,
             "mode": 0,
             "inputs": [
                 {
@@ -286,7 +294,7 @@
                 46
             ],
             "flags": {},
-            "order": 2,
+            "order": 3,
             "mode": 0,
             "inputs": [
                 {
@@ -320,15 +328,15 @@
             "id": 12,
             "type": "LoraLoader",
             "pos": [
-                140.1199951171875,
-                -13.4399995803833
+                257.4900207519531,
+                -48.52998352050781
             ],
             "size": [
                 315,
                 126
             ],
             "flags": {},
-            "order": 3,
+            "order": 4,
             "mode": 0,
             "inputs": [
                 {
@@ -382,7 +390,7 @@
                 154
             ],
             "flags": {},
-            "order": 8,
+            "order": 9,
             "mode": 0,
             "inputs": [
                 {
@@ -409,6 +417,40 @@
                 "Output Image",
                 95,
                 false
+            ]
+        },
+        {
+            "id": 16,
+            "type": "FSLoadText",
+            "pos": [
+                -203.41000366210938,
+                86.11003875732422
+            ],
+            "size": [
+                400,
+                200
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        18
+                    ]
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "4d255aad1777ed8eab65be74b7db45031cedf5ac",
+                "Node name for S&R": "FSLoadText"
+            },
+            "widgets_values": [
+                "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+                "Input Text"
             ]
         }
     ],
@@ -508,6 +550,14 @@
             14,
             0,
             "IMAGE"
+        ],
+        [
+            18,
+            16,
+            0,
+            6,
+            1,
+            "STRING"
         ]
     ],
     "groups": [],
@@ -516,8 +566,8 @@
         "ds": {
             "scale": 0.8264462809917354,
             "offset": [
-                140.49000000000024,
-                134.1100000000001
+                242.13000000000025,
+                167.9900000000001
             ]
         }
     },
