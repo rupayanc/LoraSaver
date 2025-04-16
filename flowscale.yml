@@ -110,7 +110,7 @@ workflows:
   - id: 65jab0i0fmb
     name: img_to_img_with_lora_api.json
     file: basicworkflowwithlora/img_to_img_with_lora_api.json
-    version: 0
+    version: 1
     description: ''
     inputs:
       - path: 10.inputs.image
@@ -127,6 +127,13 @@ workflows:
         demo_type: text
         category: output
         randomize: true
+      - path: 16.inputs.default_value
+        label: Input Text
+        parameter_name: default_value_74916
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
     outputs:
       - label: Output Image
         demo_type: image
@@ -148,4 +155,4 @@ normal_workflows:
   - id: 8vwid38xqsw
     name: img_to_img_with_lora.json
     file: basicworkflowwithlora/img_to_img_with_lora.json
-    version: 0
+    version: 1
