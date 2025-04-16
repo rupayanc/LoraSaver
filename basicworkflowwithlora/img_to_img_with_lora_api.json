@@ -1,7 +1,7 @@
 {
     "3": {
         "inputs": {
-            "seed": 156680208700286,
+            "seed": 514541240336954,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -31,7 +31,7 @@
     },
     "4": {
         "inputs": {
-            "ckpt_name": "epicrealism_naturalSinRC1VAE.safetensors"
+            "ckpt_name": "epicrealismXL_vx1Finalkiss.safetensors"
         },
         "class_type": "CheckpointLoaderSimple",
         "_meta": {
@@ -98,6 +98,10 @@
             "pixels": [
                 "10",
                 0
+            ],
+            "vae": [
+                "4",
+                2
             ]
         },
         "class_type": "VAEEncode",
