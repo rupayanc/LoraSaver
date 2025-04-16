@@ -107,6 +107,31 @@ workflows:
         demo_type: image
     skip_preprocess: true
     advancedConfig: true
+  - id: 65jab0i0fmb
+    name: img_to_img_with_lora_api.json
+    file: basicworkflowwithlora/img_to_img_with_lora_api.json
+    version: 0
+    description: ''
+    inputs:
+      - path: 10.inputs.image
+        label: Input Image
+        parameter_name: image_60136
+        type: string
+        demo_type: image
+        category: input
+        randomize: false
+      - path: 14.inputs.filename_prefix
+        label: filename_prefix
+        parameter_name: filename_prefix_50593
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+    outputs:
+      - label: Output Image
+        demo_type: image
+    skip_preprocess: true
+    advancedConfig: false
 normal_workflows:
   - id: 5ziln8ezgt3
     name: save_lora_on_volume.json
@@ -120,3 +145,7 @@ normal_workflows:
     name: lora_workflow.json
     file: basicworkflowwithlora/lora_workflow.json
     version: 1
+  - id: 8vwid38xqsw
+    name: img_to_img_with_lora.json
+    file: basicworkflowwithlora/img_to_img_with_lora.json
+    version: 0
