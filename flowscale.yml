@@ -152,19 +152,19 @@ workflows:
     description: ''
     file: lora_utils/load_lora_in_comfyui.json
 normal_workflows:
-  - id: 5ziln8ezgt3
+  - id: l9f5c747eqe
     name: save_lora_on_volume.json
     file: lora_utils/save_lora_on_volume.json
     version: 10
-  - id: 20779wjisgz
+  - id: 5zj4i58swwe
     name: load_lora_in_comfyui.json
     file: lora_utils/load_lora_in_comfyui.json
     version: 6
-  - id: wq7zz9c2mg
+  - id: npdfaz13uxm
     name: lora_workflow.json
     file: basicworkflowwithlora/lora_workflow.json
     version: 1
-  - id: 8vwid38xqsw
+  - id: 65jab0i0fmb
     name: img_to_img_with_lora.json
     file: basicworkflowwithlora/img_to_img_with_lora.json
     version: 2
